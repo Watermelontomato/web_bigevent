@@ -48,11 +48,11 @@ function getUserInfo() {
 
 function renderAvatar(user) {
     // 1. 获取用户名称
-    var name = user.nockname || user.username
+    var name = user.nickname || user.username
         // 设置欢迎文本
     $("#welcome").html("欢迎&nbsp;&nbsp;" + name)
         // 按需渲染
-    if (user.user_pic != null) {
+    if (user.user_pic !== null) {
         //渲染图片
         $(".layui-nav-img").html().attr("src", user.user_pic).show()
         $(".text-avatar").hide()
